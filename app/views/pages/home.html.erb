@@ -1,2 +1,12 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<h3>This is the result of the JSON:</h3>
+<ul>
+  <% @user.each do |t| %>
+    <li><%= t %></li>
+  <% end %>
+</ul>
+
+<h4>Elements in particular</h4>
+<%= "#{@username} is #{@bio}" %>
