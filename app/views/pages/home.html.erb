@@ -1,11 +1,4 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>MB Entry Level Backend Developer Challenge</h1>
 
-<ul>
-  <%= "Museums near (#{@latitude}, #{@longitude}):" %>
-  <% @result.each do |museum| %>
-    <li>
-      <%= museum["place_name"] %>
-    </li>
-  <% end %>
-</ul>
+<%= "Museums near (#{@latitude}, #{@longitude}):" %>
+<%= @museums %>
