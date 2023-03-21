@@ -10,11 +10,11 @@ class PagesController < ApplicationController
     response = Net::HTTP.get(url)
     @json = JSON.parse(response)
     @result = @json["features"]
-    @museums = {}
+    @museums = Hash.new{|hsh,key| hsh[key] = [] }
     # add everything to a JSON object
     @result.each do |museum|
       zipcode = museum["place_name"].split(",")[-2]
-      @museums[zipcode.to_i] = museum["place_name"]
+      @museums[zipcode.to_i].push(museum["place_name"])
     end
   end
 end
