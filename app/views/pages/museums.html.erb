@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h2 class="text-center mt-5 mb-5">Museums Near...</h2>
+    <div class="col-4">
+      <h5>
+        <%= "Lat: #{@latitude}" %>
+      </h5>
+      <h5>
+        <%= "Long: #{@longitude}" %>
+      </h5>
+    </div>
+    <div class="col-8">
+        <pre>
+          <%= JSON.pretty_generate(@museums) %>
+        </pre>
+    </div>
+    <a class="btn btn-primary" href="/" role="button">Back to Homepage</a>
+  </div>
+</div>
